@@ -1,0 +1,388 @@
+@import './reset';
+@import './colors';
+@import './animation';
+html {
+	scroll-padding-top: 82px;
+}
+body {
+	position: relative;
+	font-family: 'Montserrat', sans-serif;
+	background-color: #333;
+}
+
+h2 {
+	text-align: center;
+	text-transform: uppercase;
+}
+.underline {
+	margin: 0 auto;
+	width: 60px;
+	height: 4px;
+	background-color: $main-color;
+}
+.line {
+	margin: 10px auto;
+	width: 300px;
+	height: 3px;
+	background-color: $light-gray;
+}
+
+.blue-text {
+	color: $main-color;
+}
+.shadow-bg {
+	background-color: rgba(0, 0, 0, 0.8);
+	transition: background-color 0.6s;
+}
+.navbar {
+	text-transform: uppercase;
+	z-index: 100;
+	.navbar-nav {
+		a,
+		i {
+			color: $white;
+		}
+
+		a:hover {
+			color: $main-color;
+		}
+		a.active {
+			color: $main-color;
+		}
+	}
+
+	.navbar-brand {
+		font-weight: bold;
+		color: $white;
+	}
+	.fa-bars {
+		padding: 10px;
+	}
+}
+
+header {
+	color: $white;
+	h1 {
+		font-size: 30px;
+		text-transform: uppercase;
+	}
+	p {
+		font-size: 14px;
+	}
+	.hero-img {
+		position: relative;
+		height: 100vh;
+		background-image: url('../img/game-g16895d448_640.jpg');
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+		z-index: 0;
+	}
+	.hero-shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+		z-index: -20;
+	}
+	.hero-text {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		height: 100%;
+		padding: 10px;
+		text-align: center;
+		z-index: 0;
+	}
+	.btn-outline-light {
+		text-transform: uppercase;
+	}
+	.fa-chevron-down {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 20px;
+		font-size: 20px;
+		color: $white;
+	}
+}
+
+.aboutus {
+	i {
+		margin-top: 20px;
+		font-size: 30px;
+	}
+	.aboutus-card-title {
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+	.about-card-text {
+		font-size: 14px;
+	}
+	.aboutus-hover {
+		// transition: color 0.4s;
+	}
+	.aboutus-hover:hover {
+		color: $main-color;
+	}
+}
+
+.aboutus-hero {
+	position: relative;
+	background-image: url('../img/technology-g6c73a968c_640.jpg');
+	background-position: center;
+	background-size: cover;
+	color: $light-gray;
+	z-index: 0;
+	.aboutus-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.7);
+		z-index: -20;
+	}
+	.aboutus-hero-item {
+		margin: 10px 0;
+
+		i {
+			font-size: 36px;
+		}
+		.aboutus-hero-card-title {
+			font-size: 24px;
+		}
+	}
+}
+// desktop
+.portfolio {
+	.carousel-indicators {
+		padding-bottom: 20px;
+	}
+	.carousel-item {
+		position: relative;
+		height: 600px;
+		.carousel-caption {
+			position: absolute;
+			left: 0;
+			right: 0;
+			padding: 40px 0;
+			background-color: rgba(0, 0, 0, 0.7);
+		}
+	}
+}
+
+// mobile
+.portfolio {
+	.card {
+		margin: 0 20px;
+	}
+}
+// prices
+.prices {
+	.price-wrap-item {
+		margin: 20px 10px;
+		padding: 30px;
+		border-radius: 6px;
+		-webkit-box-shadow: 8px 8px 24px 0px rgba(62, 62, 75, 1);
+		-moz-box-shadow: 8px 8px 24px 0px rgba(62, 62, 75, 1);
+		box-shadow: 8px 8px 24px 0px rgba(62, 62, 75, 1);
+		background-color: rgba(243, 244, 248, 1);
+		background-image: linear-gradient(50deg, rgba(243, 244, 248, 1) 34%, rgba(119, 124, 130, 1) 100%);
+
+		transition: transform 0.2s;
+		h3 {
+			text-transform: uppercase;
+			color: $main-color;
+		}
+		p {
+			font-weight: bold;
+			.fa-solid {
+				padding: 0 5px;
+				font-size: 24px;
+			}
+			span {
+				font-weight: normal;
+			}
+		}
+		.price-tag {
+			font-size: 25px;
+		}
+	}
+	.price-wrap-item:hover {
+		transform: scale(1.07);
+	}
+	.price-info {
+		margin-top: 30px;
+		a {
+			text-decoration: none;
+		}
+	}
+}
+// team
+
+.team {
+	position: relative;
+	background-image: url('/img/meeting-room-1806702_1920.jpg');
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	z-index: 0;
+	.team-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.3);
+		z-index: -20;
+	}
+	h2 {
+		color: $white;
+	}
+	.card {
+		transition: transform 0.3s;
+		img {
+			height: 300px;
+			object-fit: cover;
+		}
+		i {
+			padding: 10px;
+		}
+		.card-body {
+			height: 160px;
+			margin-bottom: 50px;
+		}
+	}
+	.card:hover {
+		transform: scale(0.96);
+	}
+	.card-title {
+		margin-bottom: 20px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+}
+
+.achievements {
+	.achvievements-list {
+		i {
+			padding: 10px;
+			font-size: 40px;
+			color: white;
+			text-shadow: 0 0 5px #000;
+		}
+		.achvievements-list-number {
+			font-size: 20px;
+		}
+		.achvievements-list-text {
+			font-size: 13px;
+			text-transform: uppercase;
+		}
+	}
+}
+// contact
+
+.contact {
+	position: relative;
+	background-image: url('/img/eiffel-tower-1853365_1920.jpg');
+	background-position: top 170px right 90px;
+	background-size: cover;
+	background-attachment: fixed;
+	z-index: 0;
+
+	h2 {
+		color: $white;
+		font-weight: bold;
+	}
+
+	.contact-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 9, 28, 0.8);
+		z-index: -20;
+	}
+	.contact-us {
+		display: flex;
+		align-items: center;
+		color: $white;
+		.contact-item {
+			h3 {
+				text-transform: uppercase;
+			}
+		}
+		.social-media {
+			i {
+				margin: 10px 20px;
+				font-size: 22px;
+				color: $white;
+			}
+		}
+	}
+}
+
+@media (min-width: 320px) {
+	.portfolio {
+		padding: auto;
+		.card {
+			margin: 20px 0;
+		}
+	}
+	.team {
+		.card-title {
+			margin-bottom: 10px;
+		}
+		.card {
+			.card-body {
+				height: 130px;
+				margin-bottom: 60px;
+			}
+		}
+	}
+}
+@media (min-width: 375px) {
+	header {
+		h1 {
+			font-size: 36px;
+		}
+		p {
+			font-size: 16px;
+		}
+	}
+}
+@media (min-width: 768px) {
+	header {
+		h1 {
+			font-size: 42px;
+		}
+		p {
+			font-size: 20px;
+		}
+	}
+	.portfolio {
+		.card {
+			margin: 0 15px;
+		}
+	}
+}
+@media (min-width: 992px) {
+	nav {
+		height: 82px;
+	}
+	.aboutus-hero {
+		background-image: url('../img/technology-2818664.jpg');
+	}
+	.prices {
+		.price-info {
+			font-size: 20px;
+		}
+	}
+}
+@media (min-width: 1200px) {
+	header {
+		.hero-img {
+			background-image: url('../img/game-g12446e804_1920.jpg');
+		}
+	}
+}
